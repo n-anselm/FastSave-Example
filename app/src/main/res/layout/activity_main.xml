@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/darkBackground"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/colorPrimary"
+        android:elevation="5dp"
+        android:paddingRight="5dp">
+
+        <TextView
+            android:id="@+id/app_name"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@id/settings_icon"
+            android:fontFamily="sans-serif-medium"
+            android:gravity="center"
+            android:text="@string/app_name"
+            android:textColor="@android:color/white"
+            android:textSize="22sp" />
+
+        <FrameLayout
+            android:id="@+id/settings_icon"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:clickable="true"
+            android:foreground="?android:attr/selectableItemBackground">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/ic_settings" />
+
+        </FrameLayout>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/textview_number"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:paddingBottom="100dp"
+        android:text="0"
+        android:textColor="@android:color/white"
+        android:textSize="150sp" />
+
+    <TextView
+        android:id="@+id/textview_run"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/textview_number"
+        android:layout_margin="50dp"
+        android:background="@drawable/spin_button_background"
+        android:clickable="true"
+        android:elevation="3dp"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:gravity="center"
+        android:text="SPIN"
+        android:textColor="@android:color/white"
+        android:textSize="50sp" />
+
+</RelativeLayout>

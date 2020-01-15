@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/darkBackground"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/colorPrimary"
+        android:elevation="5dp">
+
+        <FrameLayout
+            android:id="@+id/settings_back_arrow"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:clickable="true"
+            android:foreground="?android:attr/selectableItemBackground">
+
+            <ImageView
+                android:layout_width="35dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/ic_chevron_left" />
+
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/app_name"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="50dp"
+            android:layout_toRightOf="@id/settings_back_arrow"
+            android:fontFamily="sans-serif-medium"
+            android:gravity="center"
+            android:text="Settings"
+            android:textColor="@android:color/white"
+            android:textSize="22sp" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/textview_min"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="88dp"
+        android:text="MIN"
+        android:textColor="@android:color/white"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/textview_max"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textview_min"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="25dp"
+        android:text="MAX"
+        android:textColor="@android:color/white"
+        android:textSize="16sp" />
+
+    <EditText
+        android:id="@+id/edittext_min"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="70dp"
+        android:gravity="center_horizontal"
+        android:hint="1"
+        android:imeOptions="actionNext"
+        android:inputType="numberSigned"
+        android:maxLength="7"
+        android:maxLines="1"
+        android:textColor="@android:color/white" />
+
+    <EditText
+        android:id="@+id/edittext_max"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edittext_min"
+        android:layout_marginLeft="60dp"
+        android:gravity="center_horizontal"
+        android:hint="10"
+        android:imeOptions="actionDone"
+        android:inputType="numberSigned"
+        android:maxLength="7"
+        android:maxLines="1"
+        android:textColor="@android:color/white" />
+
+    <TextView
+        android:id="@+id/textview_about_app"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="16dp"
+        android:clickable="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:gravity="center_horizontal"
+        android:padding="16dp"
+        android:text="About app"
+        android:textColor="@android:color/white"
+        android:textSize="16sp" />
+
+</RelativeLayout>
